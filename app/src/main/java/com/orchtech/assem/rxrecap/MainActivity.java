@@ -9,6 +9,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
                 // This tells the Observer to receive the data on android UI thread
                 // so that you can take any UI related actions.
                 .observeOn(AndroidSchedulers.mainThread())
+                // 6.
+                // Adding filters
+                //  filter() operator is used to filter out the emitted data
+                .filter(new Predicate<String>() {
+                    @Override
+                    public boolean test(String s) throws Exception {
+                        return s.toLowerCase().startsWith("b");
+                    }
+                })
                 .subscribe(animalsObserver);
 
     }
