@@ -20,9 +20,11 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Basic Observable, Observer, Subscriber example
      * Observable emits list of animal names
+     * Introduced CompositeDisposable and DisposableObserver
      * source:
      * https://www.androidhive.info/RxJava/android-getting-started-with-reactive-programming/
      * source code:
+     * https://github.com/MohamedAssemAli/Rx-Java-Recap
      */
 
     private String TAG = "RxRecapTag";
