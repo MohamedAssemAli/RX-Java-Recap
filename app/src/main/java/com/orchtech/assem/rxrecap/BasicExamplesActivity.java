@@ -27,7 +27,7 @@ public class BasicExamplesActivity extends AppCompatActivity {
      * https://github.com/MohamedAssemAli/Rx-Java-Recap
      */
 
-    private String TAG = "RxRecapTag";
+    private String TAG = OperatorsExampleActivity.class.getSimpleName();
     // 5.
     // Disposable is used and calling disposable.
     private Disposable disposable;
