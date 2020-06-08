@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
      * source code:
      */
     private String TAG = "RxRecapTag";
+    // 5.
+    // Disposable is used and calling disposable.
+    private Disposable disposable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 1.
         // Create Observable that emits list of animal names.
-        // Here just() operator is used to emit few animal names.
-        Observable<String> animalsObservable =
-                Observable.just("Ant", "Bee", "Cat", "Dog", "Fox");
+        Observable<String> animalsObservable = getAnimalsObservable();
 
 
         // 2.
@@ -51,14 +52,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // 1.
+    // observable
+    private Observable<String> getAnimalsObservable() {
+        return Observable.fromArray(
+                "Ant", "Ape",
+                "Bat", "Bee",
+                "Bear", "Butterfly",
+                "Cat", "Crab",
+                "Cod", "Dog",
+                "Dove", "Fox",
+                "Frog", "Lion");
+    }
+
     // 3.
     // Observer provides the below interface methods to know the the state of Observable
+    // Observer
     private Observer<String> getAnimalsObserver() {
         return new Observer<String>() {
             // Will be called when an Observer subscribes to Observable
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, "onSubscribe");
+                // 5.
+                // pass disposable
+                disposable = d;
             }
 
             // Will be called when Observable starts emitting the data.
@@ -79,5 +97,14 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "All items are emitted!");
             }
         };
+    }
+
+    // 5.
+    // dispose() in onDestroy() will un-subscribe the Observer.
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // don't send events once the activity is destroyed
+        disposable.dispose();
     }
 }
