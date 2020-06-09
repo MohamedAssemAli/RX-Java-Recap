@@ -1,13 +1,10 @@
 package com.orchtech.assem.rxrecap;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.location.Address;
 import android.os.Bundle;
 import android.util.Log;
 
-import org.reactivestreams.Subscriber;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +19,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
-import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
-import rx.observables.MathObservable;
 
 public class OperatorsExampleActivity extends AppCompatActivity {
 

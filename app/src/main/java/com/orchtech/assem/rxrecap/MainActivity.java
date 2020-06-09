@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.orchtech.assem.rxrecap.notes_app.view.NotesAppActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, OperatorsExampleActivity.class));
+            }
+        });
+        findViewById(R.id.notes_app).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NotesAppActivity.class));
             }
         });
 
