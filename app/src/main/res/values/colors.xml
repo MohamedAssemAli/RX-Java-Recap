@@ -3,8 +3,16 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <!--    NotesApp-->
     <color name="msg_no_notes">#999</color>
     <color name="hint_enter_note">#89c3c3c3</color>
     <color name="timestamp">#858585</color>
     <color name="note_list_text">#232323</color>
+    <!--    FlightApp-->
+    <color name="airline_name">#515151</color>
+    <color name="lbl_price">#787878</color>
+    <color name="departure">#dd000000</color>
+    <color name="tint_arrow">#6E6E6E</color>
+    <color name="duration">#dd595959</color>
+
 </resources>

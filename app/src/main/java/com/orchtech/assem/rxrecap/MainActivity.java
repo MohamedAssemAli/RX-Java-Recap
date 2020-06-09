@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.orchtech.assem.rxrecap.basic_examples.BasicExamplesActivity;
 import com.orchtech.assem.rxrecap.basic_examples.OperatorsExampleActivity;
-import com.orchtech.assem.rxrecap.fligh_app.FlightAppActivity;
+import com.orchtech.assem.rxrecap.fligh_app.view.FlightAppActivity;
 import com.orchtech.assem.rxrecap.notes_app.view.NotesAppActivity;
 
 public class MainActivity extends AppCompatActivity {

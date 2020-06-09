@@ -15,7 +15,6 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,7 +24,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
 import com.orchtech.assem.rxrecap.R;
-import com.orchtech.assem.rxrecap.notes_app.network.ApiClient;
+import com.orchtech.assem.rxrecap.notes_app.network.NotesApiClient;
 import com.orchtech.assem.rxrecap.notes_app.network.NotesApiService;
 import com.orchtech.assem.rxrecap.notes_app.network.model.Note;
 import com.orchtech.assem.rxrecap.notes_app.network.model.NotesUser;
@@ -93,7 +92,7 @@ public class NotesAppActivity extends AppCompatActivity {
         // white background notification bar
         whiteNotificationBar(fab);
 
-        apiService = ApiClient.getClient(getApplicationContext()).create(NotesApiService.class);
+        apiService = NotesApiClient.getClient(getApplicationContext()).create(NotesApiService.class);
 
         mAdapter = new NotesAdapter(this, notesList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());

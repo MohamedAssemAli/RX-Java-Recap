@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fligh_app.FlightAppActivity"></activity>
+        <activity android:name=".fligh_app.view.FlightAppActivity"></activity>
         <activity android:name=".notes_app.view.NotesAppActivity" />
         <activity android:name=".basic_examples.OperatorsExampleActivity" />
         <activity android:name=".basic_examples.BasicExamplesActivity" />

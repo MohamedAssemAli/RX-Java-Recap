@@ -1,4 +1,4 @@
-package com.orchtech.assem.rxrecap.notes_app.network;
+package com.orchtech.assem.rxrecap.fligh_app.network;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -15,7 +15,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ApiClient {
+public class FlightsApiClient {
     private static Retrofit retrofit = null;
     private static int REQUEST_TIMEOUT = 60;
     private static OkHttpClient okHttpClient;
@@ -27,7 +27,7 @@ public class ApiClient {
 
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(Const.NOTES_BASE_URL)
+                    .baseUrl(Const.Flights_BASE_URL)
                     .client(okHttpClient)
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
@@ -63,5 +63,10 @@ public class ApiClient {
             return chain.proceed(request);
         });
         okHttpClient = httpClient.build();
+    }
+
+    public static void resetApiClient() {
+        retrofit = null;
+        okHttpClient = null;
     }
 }
