@@ -1,10 +1,12 @@
-package com.orchtech.assem.rxrecap;
+package com.orchtech.assem.rxrecap.basic_examples;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.orchtech.assem.rxrecap.R;
 
 import java.util.ArrayList;
 import java.util.List;

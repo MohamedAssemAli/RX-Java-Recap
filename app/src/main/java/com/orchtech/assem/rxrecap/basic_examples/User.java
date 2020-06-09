@@ -1,4 +1,4 @@
-package com.orchtech.assem.rxrecap;
+package com.orchtech.assem.rxrecap.basic_examples;
 
 public class User {
 

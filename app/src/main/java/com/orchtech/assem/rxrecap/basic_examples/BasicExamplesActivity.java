@@ -1,9 +1,11 @@
-package com.orchtech.assem.rxrecap;
+package com.orchtech.assem.rxrecap.basic_examples;
 
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.orchtech.assem.rxrecap.R;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;

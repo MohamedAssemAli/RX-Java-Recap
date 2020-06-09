@@ -26,4 +26,10 @@
         android:text="Notes App"
         android:id="@+id/notes_app"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flights App"
+        android:id="@+id/flights_app"/>
+
 </LinearLayout>
